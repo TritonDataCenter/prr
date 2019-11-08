@@ -39,8 +39,11 @@ Note that prr enforces only a single approver for any given pull request.
 
 ## Configuration
 
-Prr reads a simple JSON configuration file, `$HOME/.prrconfig` which looks like
-this:
+If you have previously set up [hub(1)](https://hub.github.com/), `prr` can use
+its configuration file to derive the github user and API token.
+
+Alternatively, you can create a configuration file `$HOME/.prrconfig` which
+looks like this:
 
 ```
 {
