@@ -12,8 +12,7 @@ options:
     -h, --help               Print this help and exit.
     -C ARG, --gitrepo=ARG    A path to the local git repository to act upon.
     -M, --allCommitMessages  Use all lines of the commit messages from the PR in
-                             the summary, rather than just those with jira
-                             tickets.
+                             the summary, rather than just those with tickets.
     -v, --verbose            Verbose output.
 ```
 
@@ -43,8 +42,7 @@ to lookup the remote `origin` in order to construct the correct URLs when
 making GitHub REST API calls.
 
 If `-M` is passed, all commit messages from the PR are written to the temporary
-file, otherwise only messages which match the regular expression
-`'^[A-Z]+-[0-9]+ '` (e.g. "`JIRA-1234 this is a ticket synopsis`") are included.
+file, otherwise only messages which are ticket id/synopses are included.
 
 Note that prr enforces only a single approver for any given pull request.
 
