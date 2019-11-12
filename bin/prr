@@ -8,5 +8,5 @@
 /*
  * Copyright 2019 Joyent, Inc.
  */
-
+'use strict';
 require('../lib/prr');
