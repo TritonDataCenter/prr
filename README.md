@@ -6,8 +6,14 @@ Prr provides command line assistance when merging Joyent pull requests on GitHub
 ## Usage
 
 ```
-./bin/prr -h
-Usage: prr [-C GITREPO] [-v] <pull request number>
+$ ./bin/prr -h
+Usage: prr [options] <pull request number>
+options:
+    -h, --help               Print this help and exit.
+    -C ARG, --gitrepo=ARG    A path to the local git repository to act upon.
+    -M, --allCommitMessages  Use all lines of the commit messages from the PR in
+                             the summary, rather than just those with tickets.
+    -v, --verbose            Verbose output.
 ```
 
 When run from the top-level of a GitHub repository with a pull request number
@@ -35,6 +41,9 @@ in that repository, but merely uses the `.git/config` file in that repository
 to lookup the remote `origin` in order to construct the correct URLs when
 making GitHub REST API calls.
 
+If `-M` is passed, all commit messages from the PR are written to the temporary
+file, otherwise only messages which are ticket id/synopses are included.
+
 Note that prr enforces only a single approver for any given pull request.
 
 ## Configuration
@@ -52,7 +61,8 @@ looks like this:
     "userEmail": {
         "anonreviewer1": "foo.bar@email.com",
         "anonreviewer2": "bar.baz@email.com"
-    }
+    },
+    "allCommitMessages": false
 }
 ```
 
