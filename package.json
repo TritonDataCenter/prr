@@ -1,14 +1,14 @@
 {
   "name": "prr",
-  "description": "A CLI to squash and merge Joyent GitHub pull requests",
-  "version": "0.1.0",
+  "description": "A CLI to squash and merge Triton GitHub pull requests",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "assert-plus": "^1.0.0",
     "bunyan": "^1.8.12",
     "dashdash": "1.x",
     "forkexec": "1.1.0",
-    "prompt": "1.0.0",
+    "prompt": "^1.3.0",
     "restify-clients": "^1.5.2",
     "temp": "^0.9.0",
     "vasync": "2.2.0",
