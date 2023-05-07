@@ -9,7 +9,7 @@
     "dashdash": "1.x",
     "forkexec": "1.1.0",
     "prompt": "^1.3.0",
-    "restify-clients": "^1.5.2",
+    "restify-clients": "^4.2.0",
     "temp": "^0.9.0",
     "vasync": "2.2.0",
     "verror": "^1.10.0",
