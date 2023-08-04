@@ -8,6 +8,7 @@
     "bunyan": "^1.8.12",
     "dashdash": "1.x",
     "forkexec": "1.1.0",
+    "parse-git-config": "^3.0.0",
     "prompt": "^1.3.0",
     "restify-clients": "^1.5.2",
     "temp": "^0.9.0",
