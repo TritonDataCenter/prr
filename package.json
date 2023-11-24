@@ -1,7 +1,7 @@
 {
   "name": "prr",
   "description": "A CLI to squash and merge Triton GitHub pull requests",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "dependencies": {
     "assert-plus": "^1.0.0",
