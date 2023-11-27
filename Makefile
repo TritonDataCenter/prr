@@ -1,11 +1,13 @@
 #
 # Copyright 2019 Joyent, Inc.
+# Copyright 2023 MNX Cloud, Inc.
 #
 
 #
 # Vars, Tools, Files, Flags
 #
 JS_FILES	:= bin/prr lib/prr.js
+ESLINT          = ./node_modules/.bin/eslint
 ESLINT_FILES	 = $(JS_FILES)
 CLEAN_FILES += ./node_modules
 
@@ -24,6 +26,8 @@ TOP ?= $(error Unable to access eng.git submodule Makefiles.)
 .PHONY: install
 install:
 	npm install
+
+check:: package.json $(JS_FILES)
 
 #
 # Target definitions.  This is where we include the target Makefiles for
